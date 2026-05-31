@@ -129,7 +129,8 @@
         tech:['HTML5','CSS3','Maquettage'],
         comps:['C1','C5'],
         learn:"Structurer un site multi-pages et adapter l'intégration à un cahier des charges.",
-        link:'https://github.com/EvanCariou/sae-1.05-site-touristique-danemark'
+        link:'https://github.com/EvanCariou/sae-1.05-site-touristique-danemark',
+        demo:'https://evancariou.github.io/sae-1.05-site-touristique-danemark/'
       },
       {
         code:'SAÉ 1.06', title:'Projet RSE & communication',
@@ -161,7 +162,10 @@
           <div class="proj-comps">${p.comps.map(c=>`<span>${c}</span>`).join('')}</div>
           <div class="proj-foot">
             <p class="proj-learn"><b>Appris :</b> ${p.learn}</p>
-            <a class="proj-link" href="${p.link}" target="_blank" rel="noopener">Voir sur GitHub →</a>
+            <div style="display:flex;gap:14px;flex-wrap:wrap">
+              <a class="proj-link" href="${p.link}" target="_blank" rel="noopener">Voir sur GitHub →</a>
+              ${p.demo ? `<a class="proj-link" href="${p.demo}" target="_blank" rel="noopener" style="color:var(--teal)">Site en ligne →</a>` : ''}
+            </div>
           </div>`;
         projGrid.appendChild(card);
       });
