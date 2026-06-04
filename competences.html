@@ -97,78 +97,78 @@
         title:"Réaliser un développement d'application",
         desc:"Concevoir, coder et faire évoluer une application répondant à un besoin concret, en appliquant les bonnes pratiques du génie logiciel.",
         traces:[
-          "<strong>SAÉ 1.01 / 1.02 — Sokoban en C</strong> : jeu complet en console (grille, déplacements, détection de victoire), puis version 2 plus structurée.",
-          "<strong>Développement orienté objet (S2)</strong> : classes Java avec héritage et polymorphisme (Personne/Employé/Ouvrier, gestion de stock par <code>ArrayList</code>, formes géométriques).",
-          "<strong>Interfaces web (S1)</strong> : intégration HTML/CSS, site web sur le Danemark."
+          "<strong>Situation :</strong> En S1, en binôme, on devait concevoir un jeu Sokoban complet en langage C depuis zéro. C'est la SAÉ 1.01 et 1.02.",
+          "<strong>Tâche :</strong> Implémenter toute la logique du jeu : gestion de la grille, déplacements du joueur, détection de victoire, et chargement des niveaux depuis des fichiers .sok.",
+          "<strong>Action :</strong> J'ai structuré le code en fonctions séparées, géré les fichiers de niveaux, et livré deux versions successives. J'ai aussi travaillé C1 en Java au S2 — classes, héritage."
         ],
         proofs:['Langage C','Java / POO','HTML5 · CSS3','Algorithmique'],
         link:'https://github.com/EvanCariou/sae-1.01-1.02-sokoban-c',
-        eval:"Compétence dans laquelle je suis le plus à l'aise. Le vrai cap a été le passage de la programmation procédurale (C) à l'orienté objet (Java) : l'encapsulation et l'héritage m'ont d'abord déstabilisé. J'ai progressé en documentant systématiquement mes erreurs et leurs corrections, ce qui m'a permis de fiabiliser mon code TP après TP."
+        eval:"Jeu fonctionnel en console avec deux versions livrées. J'ai progressé en documentant mes erreurs TP après TP, ce qui m'a permis de fiabiliser mon code progressivement et de comprendre les différences."
       },
       {
         num:'C2', level:'En développement', cls:'lvl-mid',
         title:"Optimiser des applications",
         desc:"Analyser le comportement d'un programme, comprendre la complexité des algorithmes et améliorer l'efficacité d'une solution.",
         traces:[
-          "<strong>SAÉ 1.02 — Automatisation du Sokoban</strong> : algorithme lisant un fichier de déplacements et rejouant la partie automatiquement, sans intervention manuelle.",
-          "<strong>Graphes &amp; Méthodes numériques (S2)</strong> : étude d'algorithmes et de leur coût, premières analyses de complexité.",
-          "Refactorisation du Sokoban entre la v1 et la v2 (lisibilité, découpage en fonctions)."
+          "<strong>Situation :</strong> Toujours sur la SAÉ 1.02 : après le Sokoban jouable, on devait automatiser son exécution sans aucune intervention manuelle.",
+          "<strong>Tâche :</strong> Concevoir un algorithme capable de lire un fichier de déplacements et de rejouer la partie automatiquement, et refactoriser le code existant pour le rendre plus maintenable.",
+          "<strong>Action :</strong> J'ai revu et découpé le code entre la version 1 et la version 2 avec une meilleure lisibilité, fonctions mieux séparées et on a implémenté la lecture séquentielle des instructions depuis un fichier. J'ai aussi étudié la complexité des algorithmes en graphes et méthodes numériques au S2."
         ],
         proofs:['Algorithmique','Complexité','Refactoring','Fichiers / I-O'],
         link:'https://github.com/EvanCariou/sae-1.01-1.02-sokoban-c',
-        eval:"Compétence émergente, que je continue de construire. Je sais désormais identifier du code redondant et le factoriser, mais l'analyse formelle de complexité reste un point à approfondir. L'automatisation du Sokoban m'a fait comprendre concrètement l'intérêt d'un code pensé pour être rejoué et maintenu, pas seulement « qui marche »."
+        eval:"Version automatisée opérationnelle. J'ai compris que du bon code, c'est du code pensé pour être maintenu, automatisé et relu, pas seulement du code qui marche. C'est une compétence que je continue de construire."
       },
       {
         num:'C3', level:'Point fort · maîtrise confirmée', cls:'lvl-strong',
         title:"Administrer des systèmes informatiques communicants",
         desc:"Déployer et automatiser un environnement système : scripting, conteneurisation et chaîne de traitement de données reproductible.",
         traces:[
-          "<strong>SAÉ 1.03 — Chaîne de traitement &amp; génération de documents</strong> : pipeline complet ingestion CSV → nettoyage → tri → enrichissement → export PDF, automatisé via <strong>Bash</strong> et <strong>Docker</strong>. J'étais responsable principal de l'étape B-1 et de la conteneurisation Docker.",
-          "Scripts <code>script_depts.sh</code> (traitement des CSV) et <code>script_run_docker.sh</code> (orchestration de la chaîne).",
-          "<strong>Réseau &amp; bas niveau (S2)</strong> : bases TCP/IP et fonctionnement des systèmes."
+          "<strong>Situation :</strong> SAÉ 1.03 en équipe de 4 : traiter des CSV de sites touristiques, les nettoyer, les trier, les enrichir, et générer des PDFs automatiquement dans un environnement reproductible via Docker.",
+          "<strong>Tâche :</strong> J'étais responsable principal de l'étape B-1 et de toute la conteneurisation Docker. Environ 40 % de la charge totale de l'équipe.",
+          "<strong>Action :</strong> J'ai écrit deux scripts Bash : un premier pour tout le traitement des données CSV, et un deuxième pour orchestrer la chaîne complète. J'ai résolu un bug critique où une commande renvoie un fichier vide à cause d'une incompatibilité d'options que j'ai réussi à corriger, et j'ai aussi corrigé les PDFs qui débordent sur plusieurs pages en forçant un format CSS A4 paysage."
         ],
         proofs:['Bash','Docker','Linux','PHP','CSV / PDF'],
         link:'https://github.com/EvanCariou/sae-1.03-chaine-traitement-pdf',
-        eval:"C'est ma compétence la plus aboutie de l'année. Deux difficultés marquantes : un tri qui renvoyait un fichier vide (incompatibilité des options <code>-n</code> et <code>-V</code> de <code>sort</code>, résolue par <code>sort -t ',' -k4,4 -rn -k2,2n</code>), et des PDF qui s'étalaient sur 3–4 pages — réglé en passant la page en CSS A4 paysage. Gérer Docker m'a montré la valeur d'un environnement reproductible."
+        eval:"Pipeline complet, automatisé et reproductible. C'est ma compétence la plus aboutie de l'année. Gérer Docker m'a montré concrètement la valeur d'un environnement où n'importe qui peut relancer la chaîne sans reconfigurer quoi que ce soit."
       },
       {
         num:'C4', level:'Bonne maîtrise', cls:'',
         title:"Gérer des données de l'information",
         desc:"Modéliser, structurer et interroger des données : du modèle conceptuel à la requête, en passant par la normalisation.",
         traces:[
-          "<strong>SAÉ 1.04 — Comparateur de tarifs d'électricité</strong> : modélisation (diagramme de classes / UML), normalisation et dépendances fonctionnelles, à partir d'un jeu de données de consommation horaire réel (CSV).",
-          "<strong>Bases de données (S1) &amp; Exploitation de BDD (S2)</strong> : conception de schémas, requêtes SQL, MCD/MLD.",
+          "<strong>Situation :</strong> SAÉ 1.04 : à partir d'un jeu de données réel de consommation horaire d'électricité en CSV, concevoir une base de données pour comparer des offres tarifaires.",
+          "<strong>Tâche :</strong> Modéliser le schéma complet : diagramme de classes UML, normalisation des tables, identification des dépendances fonctionnelles.",
+          "<strong>Action :</strong> J'ai analysé les données brutes, identifié les entités et leurs relations, appliqué les formes normales et produit le diagramme UML."
         ],
         proofs:['SQL','Modélisation UML','Normalisation','Tutorial D'],
         link:'https://github.com/EvanCariou/sae-1.04-comparateur-tarifs-electricite',
-        eval:"Je suis à l'aise avec la modélisation et la normalisation : décomposer un besoin en entités et relations cohérentes est devenu naturel. Travailler sur un vrai jeu de données de consommation m'a confronté au nettoyage et à la cohérence des données."
+        eval:"Modèle normalisé fonctionnel. Travailler sur de vraies données m'a confronté à des problèmes concrets de nettoyage et de cohérence qu'on ne voit pas sur des exercices théoriques."
       },
       {
         num:'C5', level:'Compétence solide', cls:'',
         title:"Conduire un projet",
         desc:"Planifier, organiser et mener un projet d'équipe de bout en bout, en répartissant les rôles et en tenant les délais.",
         traces:[
-          "<strong>SAÉ 1.03</strong> au sein d'une équipe de 4 (≈40 % de la charge) : répartition des tâches, coordination du développement des scripts, suivi via Git.",
-          "<strong>SAÉ 1.04</strong> : planification du travail de modélisation et respect des échéances.",
-          "<strong>Gestion de projet (S2)</strong> : méthodes d'organisation et de suivi.",
-          "<strong>SAÉ 1.05 — Site touristique sur le Danemark</strong> : recueil des besoins, conception de la maquette et réalisation d'un site multi-pages en HTML/CSS."
+          "<strong>Situation :</strong> On devait réaliser la SAÉ 1.05 qui est un site touristique sur le Danemark, où je devais conduire le recueil des besoins avant de coder.",
+          "<strong>Tâche :</strong> Formaliser les besoins, concevoir la maquette, puis intégrer le site multi-pages en HTML/CSS.",
+          "<strong>Action :</strong> J'ai d'abord formalisé les besoins avant d'écrire une seule ligne de code, structuré le site en 5 pages distinctes. Le site est en ligne et accessible depuis le portfolio."
         ],
         proofs:['Git / GitHub','Planification','Répartition des rôles','Documentation'],
-        link:'https://github.com/EvanCariou/sae-1.03-chaine-traitement-pdf',
-        eval:"Première vraie expérience de coordination d'équipe. J'ai appris à découper le travail et à documenter qui fait quoi (fichier PARTICIPATION)."
+        link:'https://github.com/EvanCariou/sae-1.05-site-touristique-danemark',
+        eval:"Livrables rendus dans les délais. J'ai compris que conduire un projet, c'est organiser, documenter et débloquer les autres — pas seulement avancer dans son coin."
       },
       {
         num:'C6', level:'Maîtrise confirmée', cls:'lvl-strong',
         title:"Collaborer au sein d'une équipe informatique",
         desc:"Travailler à plusieurs, documenter son travail et communiquer clairement, à l'oral comme à l'écrit.",
         traces:[
-          "<strong>SAÉ 1.03 — Travail d'équipe outillé</strong> (Evan, Rodolphe, Eloi, Elie) : versionnage Git, débogage en binôme, documentation partagée des difficultés et solutions.",
-          "<strong>SAÉ 1.06 — Projet RSE (Danone)</strong> : travail de groupe sur plusieurs séances et deux présentations orales.",
-          "Rédaction de documentation technique (README, fiches de participation)."
+          "<strong>Situation :</strong> La SAÉ 1.06 où on devait réaliser un projet RSE sur Danone avec une présentation orale à la clé.",
+          "<strong>Tâche :</strong> Recherche et documentation sur le fonctionnement de Danone et passage à l'oral devant un jury.",
+          "<strong>Action :</strong> Pour la SAÉ 1.06, j'ai contribué au livrable de groupe et participé aux deux présentations orales."
         ],
         proofs:['Git / GitHub','Pair-programming','Doc technique','Présentation orale'],
-        link:'https://github.com/EvanCariou/sae-1.03-chaine-traitement-pdf',
-        eval:"À l'aise dans le travail collectif. J'ai compris que la documentation n'est pas une corvée mais ce qui permet à l'équipe d'avancer en parallèle : nos fiches de participation et nos récaps ont évité bien des malentendus. Les présentations orales du projet RSE m'ont fait progresser sur la communication, qui était un point d'inconfort au départ."
+        link:'https://github.com/EvanCariou/sae-1.06-projet-rse-communication',
+        eval:"Les présentations orales du RSE m'ont fait progresser sur un point qui était inconfortable au départ."
       }
     ];
 
